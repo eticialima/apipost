@@ -1,6 +1,6 @@
 // Faz o post para o servidor
 function postequipamento(url, body) {
-    fetch("http://c45412a4d96d.ngrok.io/equipamentos/",{
+    fetch("sua API",{
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -14,7 +14,7 @@ function postequipamento(url, body) {
 function getEquipamento() {
     event.preventDefault()
 
-    let url = "http://c45412a4d96d.ngrok.io/equipamentos/"
+    let url = "sua API"
 
     let nome_equipamento = document.getElementById("nome_equipamento").value
     let nome_display = document.getElementById("nome_display").value
