@@ -1,6 +1,6 @@
 // Faz o post para o servidor
-function fazPost(url, body) {
-    fetch("http://324ff003c194.ngrok.io/equipamentos/",{
+function postequipamento(url, body) {
+    fetch("http://c45412a4d96d.ngrok.io/equipamentos/",{
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -11,19 +11,23 @@ function fazPost(url, body) {
 }
 
 // faz um get  nos valores digitados
-function postEquipamento() {
+function getEquipamento() {
     event.preventDefault()
-    let url = "http://324ff003c194.ngrok.io/equipamentos/"
+
+    let url = "http://c45412a4d96d.ngrok.io/equipamentos/"
+
     let nome_equipamento = document.getElementById("nome_equipamento").value
     let nome_display = document.getElementById("nome_display").value
     let idsectra = document.getElementById("idsectra").value
+
     console.log(nome_equipamento)
     console.log(nome_display)
     console.log(idsectra)
+
     body = {
         "nome_equipamento": nome_equipamento,
         "nome_display": nome_display,
         "idsectra": idsectra
     } 
-    fazPost(url, body)
+    postequipamento(url, body)
 }
