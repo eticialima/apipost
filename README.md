@@ -10,8 +10,8 @@ API_rest_post_in_js
 * html
 * Consumindo API
 
-<p>Estudo relacionado api. Nesse arquivo podemos ver uma api em metodo POST sendo consumida. 
-API usamos o django e consumimos ela via javascript utilizando fetch.
+<p>Nesse arquivo podemos ver uma api sendo consumida. 
+Usamos o django e consumimos ela via javascript utilizando fetch.
 
 ### Arquivos no repositorio 
 * script.js
