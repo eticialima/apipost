@@ -1,5 +1,6 @@
 # API_rest_post_in_js
 API_rest_post_in_js
+
 ### Previa
  
 <img src="git/demo1.png?raw=true"/>
@@ -11,13 +12,8 @@ API_rest_post_in_js
 * Consumindo API
 
 <p>Nesse arquivo podemos ver uma api sendo consumida. 
-Usamos o django e consumimos ela via javascript utilizando fetch.
-
-### Arquivos no repositorio 
-* script.js
-* git.pasta
-* index.html
-
+Usamos o django e consumimos ela via javascript utilizando fetch. </p>
+ 
 ### Como usar ? 
 <p>- index.html </P><p> Você pode clicar no arquivo index.html para abri-lo, porem voce precisa alterar o url (diretorio) e colocar o da sua API e depois no HTML mudar os campos de nomes e pronto.</P> 
 
