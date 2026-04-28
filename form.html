@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Teste API method='POST' em JS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POST API</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row p-5">
-            <div class="col-md-4" align="center">
-                <h1>Teste API method='POST' em JS</h1> 
-                <form onsubmit="getEquipamento()">
-                    <div class="mb-3">
-                        <label class="control-label" for="nome_equipamento">nome_equipamento:</label>
-                        <input class="form-control form-control-lg" name="nome_equipamento" id="nome_equipamento"
-                            type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="control-label" for="nome_display">nome_display:</label>
-                        <input class="form-control form-control-lg" name="nome_display" id="nome_display" type="text">
-                    </div>
 
-                    <div class="mb-3">
-                        <label class="control-label" for="idsectra">idsectra:</label>
-                        <input class="form-control form-control-lg" name="idsectra" id="idsectra" type="text">
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-success shadow-sm mr-3" type="submit">Enviar</button>
-                    </div> 
-                </form> 
-            </div>
-        </div>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+
+        <h3 class="text-center mb-4">Enviar Equipamento</h3>
+
+        <form id="equipamentoForm">
+
+          <div class="mb-3">
+            <input class="form-control" id="nome_equipamento" placeholder="Nome equipamento" required>
+          </div>
+
+          <div class="mb-3">
+            <input class="form-control" id="nome_display" placeholder="Nome display" required>
+          </div>
+
+          <div class="mb-3">
+            <input class="form-control" id="idsectra" placeholder="Idsectra" required>
+          </div>
+
+          <button class="btn btn-success w-100" type="submit">
+            Enviar
+          </button>
+
+        </form>
+
+      </div>
     </div>
-    <!-- Script da api post -->
-    <script src="post.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
- 
-</body> 
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Seu JS -->
+  <script src="post.js"></script>
+
+</body>
 </html>

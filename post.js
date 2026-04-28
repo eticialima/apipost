@@ -1,33 +1,35 @@
-// Faz o post para o servidor
-function postequipamento(url, body) {
-    fetch("sua API",{
-        method: "POST",
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(body)
-    })
-    console.log(body) 
-}
+const API_URL = "sua API";
 
-// faz um get  nos valores digitados
-function getEquipamento() {
-    event.preventDefault()
+document
+  .getElementById("equipamentoForm")
+  .addEventListener("submit", handleSubmit);
 
-    let url = "sua API"
+async function handleSubmit(event) {
+  event.preventDefault();
 
-    let nome_equipamento = document.getElementById("nome_equipamento").value
-    let nome_display = document.getElementById("nome_display").value
-    let idsectra = document.getElementById("idsectra").value
+  const body = {
+    nome_equipamento: document.getElementById("nome_equipamento").value,
+    nome_display: document.getElementById("nome_display").value,
+    idsectra: document.getElementById("idsectra").value,
+  };
 
-    console.log(nome_equipamento)
-    console.log(nome_display)
-    console.log(idsectra)
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
 
-    body = {
-        "nome_equipamento": nome_equipamento,
-        "nome_display": nome_display,
-        "idsectra": idsectra
-    } 
-    postequipamento(url, body)
+    if (!response.ok) {
+      throw new Error("Erro na requisição");
+    }
+
+    const data = await response.json();
+    console.log("Sucesso:", data);
+
+  } catch (error) {
+    console.error("Erro:", error);
+  }
 }
